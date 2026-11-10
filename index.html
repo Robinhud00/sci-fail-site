@@ -143,8 +143,11 @@ footer .wrap{display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}
   <div class="steps">
     <div class="step"><h3>🍎 Mac</h3><ol>
       <li>Decomprimi lo ZIP.</li>
-      <li>Apri il Terminale nella cartella e scrivi:<pre>python3 diario_web.py</pre></li>
-      <li>Il browser si apre sul Diario.</li></ol></div>
+      <li>Apri il Terminale, scrivi <code>cd </code> (con uno spazio dopo), trascina la cartella del Diario nella finestra e premi Invio.</li>
+      <li>Avvia il Diario:<pre>python3 diario_web.py</pre></li>
+      <li>Il browser si apre sul Diario.</li></ol>
+      <p class="note" style="margin:10px 0 0"><b>Per avviarlo con il doppio clic</b> (facoltativo), una volta sola nello stesso Terminale:</p><pre>chmod +x "Avvia Diario.command"</pre>
+      <p class="note" style="margin:0">Poi tasto destro su <code>Avvia Diario.command</code> → Apri. Dalla volta dopo basta il doppio clic.</p></div>
     <div class="step"><h3>🪟 Windows</h3><ol>
       <li>Installa Python da <a href="https://www.python.org/downloads/windows/">python.org</a>, spuntando «Add python.exe to PATH».</li>
       <li>Decomprimi lo ZIP.</li>
@@ -165,12 +168,12 @@ footer .wrap{display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}
 
 <footer><div class="wrap">
   <span>© 2026 Sci-Fail · progetto vincitore del bando «Colours»</span>
-  <span>Il Diario è open source (licenza MIT)</span>
+  <span>Contatti: <a href="mailto:info@sci-fail.com">info@sci-fail.com</a> · Il Diario è open source (licenza MIT)</span>
 </div></footer>
 
 <script>
 // Quando hai un modulo per raccogliere le email (Tally, Google Forms, Buttondown…), incolla qui il link:
-var WAITLIST_URL = "";
+var WAITLIST_URL = "https://tally.so/r/xVjOEk";
 if (WAITLIST_URL) { var w = document.getElementById("wait"); w.href = WAITLIST_URL; w.hidden = false; }
 </script>
 </body>
