@@ -104,8 +104,12 @@ footer .wrap{display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}
         <li>Sezioni e titoli pensati per il tuo settore</li>
         <li>Tabelle, curve e statistica già pronte</li>
         <li>Assistente di scrittura (Claude o Gemini) che non inventa dati</li>
-        <li>Esportazione in Word ben impaginata, con immagini e tabelle</li>
+        <li>Documento Word di ogni esperimento creato e aggiornato da solo, in cartelle ordinate per gruppo e sottogruppo</li>
+        <li>Un unico documento con tutti gli esperimenti di un progetto, quando serve</li>
+        <li>Scrivi nella tua lingua o in inglese; versione inglese in un documento a parte con un clic</li>
+        <li>Interfaccia in italiano o in inglese</li>
         <li>Allegati ChemDraw, disegno di molecole e sincronizzazione con Google Drive</li>
+        <li>Si aggiorna da solo: quando esce una versione nuova te lo dice e la installa</li>
         <li>Mac e Windows, open source (licenza MIT)</li>
       </ul>
     </div>
@@ -117,7 +121,7 @@ footer .wrap{display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}
   <h2>Uno strumento per ogni settore</h2>
   <p class="lead">Scegli il tuo campo al primo avvio: il Diario mostra gli strumenti che servono a te.</p>
   <div class="grid">
-    <div class="card"><span class="ic">⚗️</span><h3>Chimica di sintesi</h3><p>Reagenti, equivalenti e rese, caratterizzazione (NMR, MS, p.f.), disegno di molecole e schemi ChemDraw.</p></div>
+    <div class="card"><span class="ic">⚗️</span><h3>Chimica di sintesi</h3><p>Reagenti, equivalenti e rese, lastre TLC disegnate con gli Rf, caratterizzazione (NMR, MS, p.f.), disegno di molecole e schemi ChemDraw.</p></div>
     <div class="card"><span class="ic">💊</span><h3>Farmacologia e biochimica</h3><p>Dose-risposta con IC50/EC50 e intervalli di confidenza, cinetica enzimatica, scheda del saggio.</p></div>
     <div class="card"><span class="ic">🧬</span><h3>Biologia molecolare e cellulare</h3><p>Piastre a 96 pozzetti, qPCR (ΔΔCt), linee cellulari e anticorpi con lotto.</p></div>
     <div class="card"><span class="ic">🦠</span><h3>Microbiologia</h3><p>Conte CFU, MIC, curve di crescita con tempo di raddoppio.</p></div>
@@ -133,9 +137,25 @@ footer .wrap{display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}
   </div>
 </div></section>
 
-<section id="scarica" class="alt"><div class="wrap">
+<section id="lab" class="alt"><div class="wrap">
+  <div class="two">
+    <div>
+      <h2>Pensato per il laboratorio</h2>
+      <p class="lead" style="margin-bottom:16px">Chi segue il lavoro vede i documenti sempre aggiornati, senza chiedere niente a nessuno.</p>
+      <ul class="ticks">
+        <li><b>Per il supervisore:</b> condividi la cartella di Google Drive e i Word degli esperimenti si aggiornano mentre lo studente scrive</li>
+        <li><b>Ordine:</b> documenti e allegati nelle stesse cartelle dei gruppi che vedi nel Diario</li>
+        <li><b>Lastre TLC:</b> scegli le corsie, sposta le macchie con il mouse, e la lastra finisce nel documento</li>
+        <li><b>Fine progetto:</b> tutti gli esperimenti in un solo Word, in ordine di data</li>
+      </ul>
+    </div>
+    <div class="shot"><img src="assets/tlc.png" alt="Lastra TLC disegnata nel Diario: corsie, macchie e Rf" loading="lazy" width="1020" height="645"></div>
+  </div>
+</div></section>
+
+<section id="scarica"><div class="wrap">
   <h2>Scarica il Diario</h2>
-  <p class="lead">Gratuito, open source. Serve solo Python 3 (già presente su Mac, da installare su Windows).</p>
+  <p class="lead">Gratuito e open source. Scarichi, fai doppio clic e scrivi.</p>
   <div class="btns" style="justify-content:flex-start;margin-bottom:26px">
     <a class="btn primary" id="dl" href="https://github.com/Robinhud00/diario-ricercatore/archive/refs/heads/main.zip">⬇️ Scarica (ZIP)</a>
     <a class="btn ghost" id="repo" href="https://github.com/Robinhud00/diario-ricercatore">Codice su GitHub</a>
@@ -143,17 +163,17 @@ footer .wrap{display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}
   <div class="steps">
     <div class="step"><h3>🍎 Mac</h3><ol>
       <li>Decomprimi lo ZIP.</li>
-      <li>Apri il Terminale, scrivi <code>cd </code> (con uno spazio dopo), trascina la cartella del Diario nella finestra e premi Invio.</li>
-      <li>Avvia il Diario:<pre>python3 diario_web.py</pre></li>
-      <li>Il browser si apre sul Diario.</li></ol>
-      <p class="note" style="margin:10px 0 0"><b>Per avviarlo con il doppio clic</b> (facoltativo), una volta sola nello stesso Terminale:</p><pre>chmod +x "Avvia Diario.command"</pre>
-      <p class="note" style="margin:0">Poi tasto destro su <code>Avvia Diario.command</code> → Apri. Dalla volta dopo basta il doppio clic.</p></div>
+      <li>Tasto destro su <code>Avvia Diario.command</code> → Apri (solo la prima volta; poi basta il doppio clic).</li>
+      <li>Il browser si apre sul Diario e sulla Scrivania compare l'icona <b>Diario del Ricercatore</b>: da lì in poi usi quella.</li></ol>
+      <p class="note" style="margin:10px 0 0"><b>Se il Mac dice che non hai i permessi per aprire il file:</b> apri il Terminale, scrivi <code>chmod +x </code> (con lo spazio), trascina dentro <code>Avvia Diario.command</code> e premi Invio. Poi ripeti il punto 2.</p></div>
     <div class="step"><h3>🪟 Windows</h3><ol>
-      <li>Installa Python da <a href="https://www.python.org/downloads/windows/">python.org</a>, spuntando «Add python.exe to PATH».</li>
       <li>Decomprimi lo ZIP.</li>
-      <li>Doppio clic su <code>Avvia Diario.bat</code>.</li></ol></div>
+      <li>Doppio clic su <code>Avvia Diario.bat</code>. Se manca Python prova a installarlo da solo (qualche minuto, una volta sola); se non ci riesce apre la pagina da cui scaricarlo.</li>
+      <li>Il browser si apre sul Diario e sul Desktop compare il collegamento <b>Diario del Ricercatore</b>.</li></ol>
+      <p class="note" style="margin:10px 0 0">Se Windows avvisa che il file non è riconosciuto: «Ulteriori informazioni» → «Esegui comunque».</p></div>
   </div>
-  <p class="note" style="margin-top:20px"><b>Privacy:</b> i tuoi esperimenti restano in una cartella sul tuo computer. Se attivi l'assistente di scrittura, il testo selezionato viene inviato al servizio che scegli (Claude o Gemini) con la tua chiave personale.</p>
+  <p class="note" style="margin-top:20px">Il Diario resta acceso in background: per spegnerlo usa il pulsante «Chiudi» in basso a sinistra. Quando esce una versione nuova compare un avviso e si aggiorna con un clic.</p>
+  <p class="note" style="margin-top:20px"><b>Privacy:</b> i tuoi esperimenti restano in una cartella sul tuo computer. All'avvio il Diario controlla su GitHub se c'è una versione nuova (non invia nessun dato). Se attivi l'assistente di scrittura, il testo selezionato viene inviato al servizio che scegli (Claude o Gemini) con la tua chiave personale.</p>
 </div></section>
 
 <section><div class="wrap">
